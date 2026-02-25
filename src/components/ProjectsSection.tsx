@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Anchor, Flame, Shield, GraduationCap, Home } from "lucide-react";
+import { Anchor, ExternalLink, Flame, Github, GraduationCap, Home, Shield } from "lucide-react";
 
 interface Project {
   title: string;
@@ -7,7 +7,7 @@ interface Project {
   longDescription: string;
   tech: string[];
   liveUrl?: string;
-  githubUrl: string;
+  githubUrl?: string;
   icon: React.ReactNode;
   accentClass: string;
 }
@@ -29,10 +29,10 @@ const projects: Project[] = [
     description: "Home Assistant KNX-Integration",
     longDescription:
       "Custom Component zur Integration von Theben LUXORliving KNX-Gateways in Home Assistant. Automatische Entity-Discovery, Config Flow UI, HACS-kompatibel.",
-    tech: ["Python", "Home Assistant", "KNX/IP", "Async I/O"],
+    tech: ["HomeAssistant", "HACS", "KNX/IP"],
     githubUrl: "https://github.com/phismith91/luxorliving",
     icon: <Home className="w-6 h-6" />,
-    accentClass: "gradient-ocean",
+    accentClass: "gradient-sunrise",
   },
   {
     title: "Notenschluss",
@@ -43,7 +43,17 @@ const projects: Project[] = [
     liveUrl: "https://notenschluss.de",
     githubUrl: "https://github.com/phismith91/notenschluss",
     icon: <GraduationCap className="w-6 h-6" />,
-    accentClass: "gradient-warm",
+    accentClass: "gradient-forest",
+  },
+  {
+    title: "Notenfreude",
+    description: "Live-Projekt rund um Noten",
+    longDescription:
+      "Ein aktuelles Projekt mit Fokus auf Noten und Musik. Details folgen, sobald alles bereit ist.",
+    tech: ["Website"],
+    liveUrl: "https://notenfreude.de/",
+    icon: <GraduationCap className="w-6 h-6" />,
+    accentClass: "gradient-forest",
   },
   {
     title: "dFFA-Rechner",
@@ -157,18 +167,55 @@ const ProjectsSection = () => {
                     Live
                   </a>
                 )}
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github className="w-4 h-4" />
-                  Code
-                </a>
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    Code
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-16"
+        >
+          <h3 className="text-sm font-display font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+            Aktuell im Fokus
+          </h3>
+          <p className="text-xl md:text-2xl font-display font-semibold text-foreground mb-6">
+            Laufende Projekte und Ideen, an denen ich gerade arbeite
+          </p>
+          <div className="space-y-3">
+            <div className="bg-card rounded-xl p-6 border border-border shadow-card">
+              <h4 className="text-base font-display font-semibold text-foreground mb-1">
+                Powerful Questions
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Aufbau einer Coaching-Plattform mit Rollen, Favoriten und
+                Session-Modus. Fokus auf klare UX und kuratierte Inhalte.
+              </p>
+            </div>
+            <div className="bg-card rounded-xl p-6 border border-border shadow-card">
+              <h4 className="text-base font-display font-semibold text-foreground mb-1">
+                Verkaufsdisplay
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Live-Anzeige fuer Verkaufsstaende mit Konsole, Kundenanzeige
+                und Statistiken. Weiterentwicklung von Themes und Workflows.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

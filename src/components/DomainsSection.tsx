@@ -6,54 +6,15 @@ interface InterestDomain {
   domain: string;
   emoji: string;
   description: string;
-}
+};
 
-const domains: InterestDomain[] = [
-  {
-    name: "Segeln",
-    domain: "sailing.withphil.de",
-    emoji: "⛵",
-    description: "Törnberichte, Checklisten & Skipper-Ressourcen",
-  },
-  {
-    name: "Feuerwehr",
-    domain: "firefighting.withphil.de",
-    emoji: "🚒",
-    description: "Tools und Wissen rund um die Feuerwehr",
-  },
-  {
-    name: "dFFA",
-    domain: "dffa.withphil.de",
-    emoji: "💪",
-    description: "Feuerwehr-Fitnessabzeichen Rechner",
-  },
-  {
-    name: "Auslosung",
-    domain: "los.withphil.de",
-    emoji: "🎲",
-    description: "Faire Zufallsziehungen für die Feuerwehr",
-  },
-];
+const domains: InterestDomain[] = [];
+
 
 const DomainsSection = () => {
   return (
     <section id="domains" className="py-24 px-6">
       <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
-          <h2 className="text-sm font-display font-semibold uppercase tracking-widest text-muted-foreground mb-4">
-            withphil.de Universum
-          </h2>
-          <p className="text-3xl md:text-4xl font-display font-bold text-foreground max-w-xl">
-            Jedes Interesse hat sein eigenes Zuhause
-          </p>
-        </motion.div>
-
         <div className="space-y-3">
           {domains.map((d, i) => (
             <motion.a

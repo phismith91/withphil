@@ -40,6 +40,9 @@
     --gradient-hero: linear-gradient(135deg, hsl(220 60% 35%) 0%, hsl(170 45% 40%) 50%, hsl(15 60% 50%) 100%);
     --gradient-warm: linear-gradient(135deg, hsl(15 60% 50%) 0%, hsl(30 70% 55%) 100%);
     --gradient-ocean: linear-gradient(135deg, hsl(220 60% 35%) 0%, hsl(200 50% 45%) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(140 45% 38%) 0%, hsl(170 45% 40%) 100%);
+    --gradient-sunrise: linear-gradient(135deg, hsl(30 80% 55%) 0%, hsl(45 85% 60%) 100%);
+    --gradient-slate: linear-gradient(135deg, hsl(210 25% 40%) 0%, hsl(190 35% 45%) 100%);
     --shadow-card: 0 4px 20px -4px hsl(220 20% 12% / 0.08);
     --shadow-card-hover: 0 12px 40px -8px hsl(220 20% 12% / 0.15);
 
@@ -121,5 +124,17 @@
 
   .gradient-ocean {
     background: var(--gradient-ocean);
+  }
+
+  .gradient-forest {
+    background: var(--gradient-forest);
+  }
+
+  .gradient-sunrise {
+    background: var(--gradient-sunrise);
+  }
+
+  .gradient-slate {
+    background: var(--gradient-slate);
   }
 }

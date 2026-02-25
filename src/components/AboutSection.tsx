@@ -17,18 +17,19 @@ const AboutSection = () => {
             <div>
               <p className="text-2xl md:text-3xl font-display font-medium leading-relaxed text-foreground mb-6">
                 Seit 2020 unterstütze ich Teams dabei, agile Methoden effektiv
-                einzusetzen und komplexe Projekte erfolgreich umzusetzen.
+                einzusetzen. Als Scrum Master im Automotive-Umfeld begleite ich
+                komplexe Projekte von der Idee bis zur Umsetzung.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Mit meinem Hintergrund in Mechatronik und Softwareentwicklung
-                bringe ich technisches Verständnis und methodisches Know-how
-                zusammen. Neben meiner Arbeit entwickle ich in meiner Freizeit
-                Web-Anwendungen und Smart-Home-Integrationen.
+                kombiniere ich Technik mit Praxis: Programmierung, Arduino,
+                Maker-Projekte mit 3D-Druck und ADS-B/FlightRadar.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Meine Projekte reichen von privacy-first Web-Apps über
-                KNX-Home-Assistant-Integrationen bis hin zu Tools für die
-                Feuerwehr. Alle sind Open Source.
+                Feuerwehr und DLRG sind mein Hobby, genauso wie Segeln auf dem
+                Wasser und die Faszination fuers Fliegen. Dazu kommen
+                privacy-first Web-Apps und Smart-Home-Integrationen. Wie viele
+                nutze ich unterwegs viel AI - etwa GitHub Copilot und Claude.
               </p>
             </div>
             <div className="space-y-6">
@@ -37,7 +38,7 @@ const AboutSection = () => {
                   Frontend
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["JavaScript", "React", "HTML/CSS", "Hugo"].map((t) => (
+                  {["Sphinx", "Sphinx-needs", "Restructured Text", "Markdown", "Hugo"].map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
@@ -52,7 +53,7 @@ const AboutSection = () => {
                   Backend
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "Node.js"].map((t) => (
+                  {["Python", "C"].map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
@@ -82,7 +83,7 @@ const AboutSection = () => {
                   Tools
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Git", "Docker", "GitHub Actions"].map((t) => (
+                  {["Git", "Docker", "GitHub", "GitLab"].map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
