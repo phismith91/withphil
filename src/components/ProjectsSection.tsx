@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Anchor, ExternalLink, Flame, Github, GraduationCap, Home, Shield } from "lucide-react";
+import { Anchor, BookOpen, Crosshair, ExternalLink, Flame, Github, GraduationCap, Home, Shield, Siren, TreePine } from "lucide-react";
 
 interface Project {
   title: string;
@@ -28,8 +28,8 @@ const projects: Project[] = [
     title: "LUXORliving",
     description: "Home Assistant KNX-Integration",
     longDescription:
-      "Custom Component zur Integration von Theben LUXORliving KNX-Gateways in Home Assistant. Automatische Entity-Discovery, Config Flow UI, HACS-kompatibel.",
-    tech: ["HomeAssistant", "HACS", "KNX/IP"],
+      "Custom Component für Theben LUXORliving KNX-Gateways in Home Assistant. Automatische Entity-Discovery, Config Flow UI, HACS-kompatibel. Aktuelle Version: v1.1.0 (Quality Scale Bronze+).",
+    tech: ["HomeAssistant", "HACS", "KNX/IP", "Python"],
     githubUrl: "https://github.com/phismith91/luxorliving",
     icon: <Home className="w-6 h-6" />,
     accentClass: "gradient-sunrise",
@@ -47,9 +47,9 @@ const projects: Project[] = [
   },
   {
     title: "Notenfreude",
-    description: "Live-Projekt rund um Noten",
+    description: "Privacy-first Schulnotenmanager",
     longDescription:
-      "Ein aktuelles Projekt mit Fokus auf Noten und Musik. Details folgen, sobald alles bereit ist.",
+      "Schulnoten verwalten ohne Cloud, Account oder Tracking. Fächer, Gewichtungen und Notendurchschnitte — alles bleibt lokal auf dem Gerät.",
     tech: ["Website"],
     liveUrl: "https://notenfreude.de/",
     icon: <GraduationCap className="w-6 h-6" />,
@@ -75,6 +75,44 @@ const projects: Project[] = [
     liveUrl: "https://los.withphil.de",
     githubUrl: "https://github.com/phismith91/brandsicherheitswache",
     icon: <Shield className="w-6 h-6" />,
+    accentClass: "gradient-warm",
+  },
+  {
+    title: "Holzpreisvergleich",
+    description: "Brennholz-Preisrechner",
+    longDescription:
+      "Angebote normalisiert vergleichen nach €/Festmeter und €/kWh. Bis zu 5 Angebote gleichzeitig, Mischlieferungen, Lieferkosten und Holzfeuchte-Korrekturfaktor. Kein Backend, keine Datenbank.",
+    tech: ["React 19", "Vite", "GitHub Pages"],
+    liveUrl: "https://holzpreisvergleich.de",
+    githubUrl: "https://github.com/phismith91/holzpreisvergleich",
+    icon: <TreePine className="w-6 h-6" />,
+    accentClass: "gradient-forest",
+  },
+  {
+    title: "KatastrophenNetz",
+    description: "Helfer-Koordination bei Katastrophen",
+    longDescription:
+      "SMS-first Plattform zur Koordination von Spontanhelfern bei Hochwasser, Sturm und Co. Einsatzleitung weist Aufgaben zu, Helfer melden sich per SMS — ohne App, ohne Account.",
+    tech: ["Django", "HTMX", "Celery", "Twilio"],
+    icon: <Siren className="w-6 h-6" />,
+    accentClass: "gradient-warm",
+  },
+  {
+    title: "BOS-Docs",
+    description: "Doku-Plattform für Feuerwehr & THW",
+    longDescription:
+      "Open-Source Dokumentationsplattform für BOS-Organisationen (FFW, THW, DLRG). WYSIWYG-Editor im Browser, Sphinx baut daraus HTML-Dokumentation pro Organisation. Multi-Tenant, AGPL.",
+    tech: ["Django", "Sphinx", "TipTap", "PostgreSQL"],
+    icon: <BookOpen className="w-6 h-6" />,
+    accentClass: "gradient-ocean",
+  },
+  {
+    title: "DartForge",
+    description: "Universelle Dart-Engine",
+    longDescription:
+      "Framework-agnostische Game Engine für Darts: Scoring, Checkout-Erkennung, Turnierverwaltung mit Brackets. Drei unabhängige Pure-State-Machine-Engines ohne externe Abhängigkeiten.",
+    tech: ["JavaScript", "Zero Dependencies", "MIT"],
+    icon: <Crosshair className="w-6 h-6" />,
     accentClass: "gradient-warm",
   },
 ];
@@ -199,20 +237,18 @@ const ProjectsSection = () => {
           <div className="space-y-3">
             <div className="bg-card rounded-xl p-6 border border-border shadow-card">
               <h4 className="text-base font-display font-semibold text-foreground mb-1">
-                Powerful Questions
+                Verkaufsdisplay
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Aufbau einer Coaching-Plattform mit Rollen, Favoriten und
-                Session-Modus. Fokus auf klare UX und kuratierte Inhalte.
+                Live-Anzeige für Verkaufsstände: Konsole, Kundenanzeige, Statistiken und Archiv-Funktion. Weiterentwicklung mit Sound-Ansage und Kunden-Statusseite per QR-Code.
               </p>
             </div>
             <div className="bg-card rounded-xl p-6 border border-border shadow-card">
               <h4 className="text-base font-display font-semibold text-foreground mb-1">
-                Verkaufsdisplay
+                KatastrophenNetz v2
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Live-Anzeige fuer Verkaufsstaende mit Konsole, Kundenanzeige
-                und Statistiken. Weiterentwicklung von Themes und Workflows.
+                Ausbau zur Mattermost-basierten Stab-Plattform: SMS-Bridge, dynamische Bereitstellungsraum-Channels und Lagekarte mit Leaflet.
               </p>
             </div>
           </div>

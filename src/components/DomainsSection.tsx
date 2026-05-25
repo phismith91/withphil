@@ -8,13 +8,64 @@ interface InterestDomain {
   description: string;
 };
 
-const domains: InterestDomain[] = [];
+const domains: InterestDomain[] = [
+  {
+    name: "Sailing with Phil",
+    domain: "sailing.withphil.de",
+    emoji: "⛵",
+    description: "Törnberichte, Crew-Ressourcen und Skipper-Dokumente",
+  },
+  {
+    name: "Notenschluss",
+    domain: "notenschluss.de",
+    emoji: "🎓",
+    description: "Privacy-first Notenmanager — komplett lokal",
+  },
+  {
+    name: "Notenfreude",
+    domain: "notenfreude.de",
+    emoji: "📊",
+    description: "Schulnoten verwalten ohne Cloud oder Tracking",
+  },
+  {
+    name: "Holzpreisvergleich",
+    domain: "holzpreisvergleich.de",
+    emoji: "🪵",
+    description: "Brennholz-Angebote normalisiert vergleichen",
+  },
+  {
+    name: "dFFA-Rechner",
+    domain: "dffa.withphil.de",
+    emoji: "🔥",
+    description: "Deutsches Feuerwehr-Fitnessabzeichen berechnen und auswerten",
+  },
+  {
+    name: "Brandsicherheitswache",
+    domain: "los.withphil.de",
+    emoji: "🛡️",
+    description: "Kryptographisch sichere Zufallsauslosungen mit PDF-Export",
+  },
+];
 
 
 const DomainsSection = () => {
   return (
-    <section id="domains" className="py-24 px-6">
+    <section id="domains" className="py-24 px-6 bg-muted/50">
       <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-sm font-display font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+            Domains
+          </h2>
+          <p className="text-3xl md:text-4xl font-display font-bold text-foreground max-w-xl">
+            Projekte mit eigener Adresse
+          </p>
+        </motion.div>
         <div className="space-y-3">
           {domains.map((d, i) => (
             <motion.a

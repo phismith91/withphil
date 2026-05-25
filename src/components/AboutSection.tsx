@@ -38,7 +38,22 @@ const AboutSection = () => {
                   Frontend
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Sphinx", "Sphinx-needs", "Restructured Text", "Markdown", "Hugo"].map((t) => (
+                  {["React", "TypeScript", "JavaScript", "Tailwind CSS", "Vite"].map((t) => (
+                    <span
+                      key={t}
+                      className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xs font-display font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+                  Docs & Static Sites
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Sphinx", "Hugo", "MkDocs", "Markdown"].map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
@@ -53,7 +68,7 @@ const AboutSection = () => {
                   Backend
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Python", "C"].map((t) => (
+                  {["Python", "Django", "C"].map((t) => (
                     <span
                       key={t}
                       className="px-3 py-1.5 text-sm rounded-md bg-muted text-muted-foreground"
