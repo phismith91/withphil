@@ -25,32 +25,11 @@ const AboutSection = () => {
                 kombiniere ich Technik mit Praxis: Programmierung, Arduino,
                 Maker-Projekte mit 3D-Druck und ADS-B/FlightRadar.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Feuerwehr und DLRG sind mein Hobby, genauso wie Segeln auf dem
                 Wasser und die Faszination fürs Fliegen. Dazu kommen
                 privacy-first Web-Apps und Smart-Home-Integrationen. Wie viele
                 nutze ich unterwegs viel AI — etwa GitHub Copilot und Claude.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Als Mentor im{" "}
-                <a
-                  href="https://bevisioneers.de"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  bevisioneers
-                </a>
-                -Programm begleite ich{" "}
-                <a
-                  href="https://www.maa-smartgraze.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground underline underline-offset-4 hover:text-primary transition-colors"
-                >
-                  MaaSmartGraze
-                </a>
-                , ein Startup für nachhaltige Weidewirtschaft.
               </p>
             </div>
             <div className="space-y-6">
