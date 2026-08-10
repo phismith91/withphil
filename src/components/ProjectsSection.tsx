@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Anchor, BookOpen, Crosshair, ExternalLink, Flame, Github, GraduationCap, Home, Shield, Siren, TreePine } from "lucide-react";
+import { Anchor, BookOpen, Crosshair, ExternalLink, Flame, Github, GraduationCap, Home, Shield, Siren, Sprout, TreePine } from "lucide-react";
 
 interface Project {
   title: string;
@@ -114,6 +114,16 @@ const projects: Project[] = [
     tech: ["JavaScript", "Zero Dependencies", "MIT"],
     icon: <Crosshair className="w-6 h-6" />,
     accentClass: "gradient-warm",
+  },
+  {
+    title: "MaaSmartGraze",
+    description: "Website — bevisioneers-Startup",
+    longDescription:
+      "Webmaster für die Website des bevisioneers-Startups MaaSmartGraze, das an nachhaltiger Weidewirtschaft arbeitet. Ich begleite das Team dort als Mentor.",
+    tech: ["Website"],
+    liveUrl: "https://www.maa-smartgraze.com",
+    icon: <Sprout className="w-6 h-6" />,
+    accentClass: "gradient-forest",
   },
 ];
 
