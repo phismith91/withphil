@@ -117,9 +117,9 @@ const projects: Project[] = [
   },
   {
     title: "MaaSmartGraze",
-    description: "Website — bevisioneers-Startup",
+    description: "Mentor — bevisioneers-Startup",
     longDescription:
-      "Webmaster für die Website des bevisioneers-Startups MaaSmartGraze, das an nachhaltiger Weidewirtschaft arbeitet. Ich begleite das Team dort als Mentor.",
+      "Ich bin Mentor für das bevisioneers-Startup MaaSmartGraze, das an nachhaltiger Weidewirtschaft arbeitet, und hoste die Website des Teams.",
     tech: ["Website"],
     liveUrl: "https://www.maa-smartgraze.com",
     icon: <Sprout className="w-6 h-6" />,
